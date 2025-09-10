@@ -9,6 +9,11 @@
   background-color: var(--color-surface);
   box-shadow: 1px 0 10px var(--shadow-border);
   transition: width 0.3s ease;
+  overflow: hidden;
+}
+
+.sidebar.closed {
+  width: 60px;
 }
 
 .menu-btn {
@@ -26,6 +31,7 @@
   box-shadow: 2px 2px 5px var(--shadow-border);
   cursor: pointer;
   transition: right 0.3s ease;
+  margin: 10px;
 }
 
 .menu-btn i {
@@ -41,10 +47,34 @@
   margin-bottom: 1.8rem;
   overflow: hidden;
 }
+
 .brand img {
   width: 35%;
 }
+
 .brand span {
   font-size: 1.1rem;
   color: var(--color-primary);
+}
+
+.menu-link {
+  transition: background 0.2s, color 0.2s;
+}
+
+.menu-link:hover {
+  background: #f0f0f0;
+  color: #007bff;
+}
+
+.seccion {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s, transform 0.4s;
+  display: none;
+}
+
+.seccion.active {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
 }
