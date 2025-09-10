@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <!-- fonts -->
+
+    <!-- fonts  -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EventFlowBudget</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous" />
+    <!-- Boxicons -->
+    <link
+      href="https://cdn.boxicons.com/fonts/basic/boxicons.min.css"
+      rel="stylesheet" />
+    <!-- Styles Personalizados -->
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/sidebar.css" />
+  </head>
+
+  <!-- <body> -->
+  <body>
+    <div class="sidebar">
+      <div class="menu-btn">
+        <i class="bx bx-arrow-right-stroke-circle" style="color: #000000"></i>
+      </div>
+      <div class="brand">
+        <img src="/images/EventFlowBudget.png" alt="Logo" />
+        <span>EventFlowBudget</span>
+      </div>
+
+      <!-- Opciones Menu Sidebar -->
+      <div class="menu-container">
+        <ul class="menu">
+          <li class="menu-item menu-item-static">
+            <a href="#" class="menu-link" onclick="mostrarSeccion('inicio')">
+              <i class="bx bx-home-alt" style="color: #000000"></i>
+              <span>Inicio</span>
+            </a>
+          </li>
+          <li class="menu-item">
+            <a href="#" class="menu-link" onclick="mostrarSeccion('eventos')">
+              <i class="bx bx-calendar-event" style="color: #000000"></i>
+              <span>Eventos</span>
+            </a>
+          </li>
+          <li class="menu-item">
+            <a
+              href="#"
+              class="menu-link"
+              onclick="mostrarSeccion('presupuestos')">
+              <i class="bx bx-money" style="color: #000000"></i>
+              <span>Presupuestos</span>
+            </a>
+          </li>
+          <li class="menu-item">
+            <a href="#" class="menu-link" onclick="mostrarSeccion('usuarios')">
+              <i class="bx bx-user" style="color: #000000"></i>
+              <span>Usuarios</span>
+            </a>
+          </li>
+          <li class="menu-item">
+            <a
+              href="#"
+              class="menu-link"
+              onclick="mostrarSeccion('configuracion')">
+              <i class="bx bx-cog" style="color: #000000"></i>
+              <span>Configuración</span>
+            </a>
+          </li>
+          <li class="menu-item">
+            <a href="#" class="menu-link" onclick="mostrarSeccion('salir')">
+              <i class="bx bx-log-out" style="color: #000000"></i>
+              <span>Salir</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Contenido principal -->
+    <div
+      class="main-content"
+      id="main-content"
+      style="margin-left: 250px; padding: 30px">
+      <div id="inicio" class="seccion">
+        <h2>Bienvenido a EventFlowBudget</h2>
+        <p>
+          Gestiona tus eventos y presupuestos de manera sencilla y eficiente.
+        </p>
+      </div>
+      <div id="eventos" class="seccion" style="display: none">
+        <h2>Eventos</h2>
+        <p>
+          Aquí puedes ver, crear y administrar todos tus eventos programados.
+        </p>
+        <!-- Ejemplo de tabla de eventos -->
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Fecha</th>
+              <th>Estado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Fiesta de Fin de Año</td>
+              <td>31/12/2025</td>
+              <td>Pendiente</td>
+            </tr>
+            <tr>
+              <td>Conferencia IPN</td>
+              <td>15/10/2025</td>
+              <td>Confirmado</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div id="presupuestos" class="seccion" style="display: none">
+        <h2>Presupuestos</h2>
+        <p>Consulta y administra los presupuestos asignados a cada evento.</p>
+        <!-- Ejemplo de presupuesto -->
+        <ul>
+          <li>Fiesta de Fin de Año: $15,000 MXN</li>
+          <li>Conferencia IPN: $8,000 MXN</li>
+        </ul>
+      </div>
+      <div id="usuarios" class="seccion" style="display: none">
+        <h2>Usuarios</h2>
+        <p>Administra los usuarios que tienen acceso al sistema.</p>
+        <!-- Ejemplo de lista de usuarios -->
+        <ul>
+          <li>Daniel García - Administrador</li>
+          <li>María López - Organizador</li>
+        </ul>
+      </div>
+      <div id="configuracion" class="seccion" style="display: none">
+        <h2>Configuración</h2>
+        <p>Ajusta las preferencias y parámetros del sistema.</p>
+        <!-- Ejemplo de configuración -->
+        <ul>
+          <li>Idioma: Español</li>
+          <li>Zona horaria: CDMX</li>
+        </ul>
+      </div>
+      <div id="salir" class="seccion" style="display: none">
+        <h2>Salir</h2>
+        <p>¿Seguro que deseas cerrar sesiónssss?</p>
+        <button class="btn btn-danger">Cerrar sesión</button>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+      integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+      crossorigin="anonymous"></script>
+    <script src="/scripts/script.js"></script>
+    <script>
+      // Mostrar la sección seleccionada y ocultar las demás
+      function mostrarSeccion(seccion) {
+        const secciones = document.querySelectorAll(".seccion");
+        secciones.forEach(s => (s.style.display = "none"));
+        document.getElementById(seccion).style.display = "block";
+      }
+    </script>
+  </body>
+</html>

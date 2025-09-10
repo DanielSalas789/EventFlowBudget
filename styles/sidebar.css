@@ -1,0 +1,51 @@
+.sidebar {
+  border: 2px solid red;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 15rem;
+  height: 100%;
+  padding: 1.4rem 1rem;
+  background-color: var(--color-surface);
+  box-shadow: 1px 0 10px var(--shadow-border);
+  transition: width 0.3s ease;
+}
+
+.menu-btn {
+  position: absolute;
+  top: 3.5%;
+  right: -0.87rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+  background-color: #bfbdbd;
+  color: #00b3ff;
+  box-shadow: 2px 2px 5px var(--shadow-border);
+  cursor: pointer;
+  transition: right 0.3s ease;
+}
+
+.menu-btn i {
+  font-size: 1.4rem;
+}
+
+.brand {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-left: 0.7rem;
+  margin-bottom: 1.8rem;
+  overflow: hidden;
+}
+.brand img {
+  width: 35%;
+}
+.brand span {
+  font-size: 1.1rem;
+  color: var(--color-primary);
+}
