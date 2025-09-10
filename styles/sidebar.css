@@ -1,5 +1,4 @@
 .sidebar {
-  border: 2px solid red;
   position: fixed;
   display: flex;
   flex-direction: column;
